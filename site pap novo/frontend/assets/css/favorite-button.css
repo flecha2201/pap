@@ -1,0 +1,47 @@
+.favorite-checkbox {
+    display: none; /* Esconde o input */
+}
+
+.favorite-container {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 50%; /* Botão circular */
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.favorite-container:hover {
+    transform: scale(1.1); /* Aumenta ligeiramente no hover */
+}
+
+.favorite-checkbox:checked + .favorite-container svg {
+    fill: hsl(0deg 100% 50%);
+    stroke: hsl(0deg 100% 50%);
+    animation: heartButton 0.5s ease; /* Suaviza a animação */
+}
+
+@keyframes heartButton {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.3);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

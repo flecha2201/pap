@@ -1,0 +1,80 @@
+.no-results {
+    font-size: 1.2rem;
+    padding: 15px;
+    border-radius: 8px;
+    color: #b168ff /* Branco suave */
+    text-align: center;
+    margin-top: 20px;
+}
+
+.no-results strong {
+    font-weight: bold;
+    color: #b168ff; /* Tom mais claro para destaque */
+}
+
+.search-term {
+    color: #b168ff; /* Tom de azul claro para dar destaque ao termo pesquisado */
+    font-weight: bold;
+}
+
+
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-left: 10px; /* Espaço entre as categorias e a barra de pesquisa */  
+}
+.input {
+
+  font-size: 0.9rem;
+  background-color: transparent;
+  width: 200%;
+  box-sizing: border-box;
+  padding-inline: 0.5em;
+  padding-block: 0.7em;
+  border: none;
+  border-bottom: var(--border-height) solid var(--border-before-color);
+
+}
+
+.input-border {
+  position: absolute;
+  background: var(--border-after-color);
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input:focus + .input-border {
+  width: 100%;
+}
+
+.control {
+  position: relative;
+  border: none;
+  padding: 0;
+  margin: 0;
+  --width-of-input: 298px;
+}
+
+.input-alt {
+
+  padding-inline: 1em;
+  padding-block: 0.8em;
+  
+}
+
+.input-border-alt {
+  height: 3px;
+  background: linear-gradient(to top right, #ece4fc, #b690f7, #9572f1, #524ae3);
+  transition: width 0.4s cubic-bezier(0.42, 0, 0.58, 1.00);
+}
+
+.input-alt:focus + .input-border-alt {
+  width: 200%;
+}

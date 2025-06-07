@@ -1,0 +1,222 @@
+/* Container principal */
+.container {
+    margin-top: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, #d3d3fb, #524ae3);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Formulário de filtros */
+form.form-inline {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+form .form-group label {
+    font-weight: bold;
+    color: #524ae3;
+}
+
+form .form-group select, form .form-group input {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+    width: 100%;
+}
+
+/* Botão de filtrar */
+form button.btn {
+    background-color: #524ae3;
+    color: #fff;
+    border: none;
+    transition: 0.3s;
+}
+
+form button.btn:hover {
+    background-color: #9572f1;
+}
+
+/* Tabela */
+table.table {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+table.table th {
+    background: #524ae3;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+}
+
+table.table td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+}
+
+table.table img {
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+table.table img:hover {
+    transform: scale(1.1);
+}
+
+/* Botões de ação */
+table.table a.btn {
+    margin: 0 5px;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+table.table a.btn-warning {
+    background: #ffae42;
+    color: #fff;
+}
+
+table.table a.btn-danger {
+    background: #d9534f;
+    color: #fff;
+}
+
+table.table a.btn:hover {
+    opacity: 0.9;
+}
+
+/* Paginação */
+p {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+p a {
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+p a:hover {
+    transform: scale(1.1);
+}
+
+p a[style*="background-color: #007BFF;"] {
+    background-color: #524ae3 !important;
+    color: white !important;
+}
+
+
+/* ... (rest of your CSS code remains the same) ... */
+/* Estilização do modal */
+#productModal .modal-content {
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+/* Estilo da imagem no modal */
+#productModal .product-image-modal img {
+    width: 100%;
+    max-width: 400px; /* Ajuste conforme necessário */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+/* Melhor espaçamento para as informações */
+#productModal .product-details {
+    flex: 1;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+#productModal .product-details h4 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #524ae3; /* Ou a cor que você usa para o título */
+}
+
+#productModal .product-details p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+#productModal .seller-avatar img {
+    border: 2px solid #d3d3fb; /* Ou a cor de contorno que você usa */
+    padding: 2px;
+}
+
+/* Estilos para os botões "Ver Detalhes" nos cards */
+.card-body .btn-primary { /* Seletor mais específico para não afetar outros botões */
+    background-color: #524ae3;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    text-transform: capitalize;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Ajuste conforme necessário */
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card-body .btn-primary:hover {
+    background-color: #938bf0;
+}
+
+.card { /* Estilos para os cards */
+    /* Adicione aqui os estilos que você quer para os cards */
+    border: none; /* Exemplo: remover bordas dos cards */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Exemplo: adicionar sombra aos cards */
+    transition: transform 0.2s; /* Exemplo: adicionar transição para efeito de hover */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Exemplo: aumentar um pouco o card no hover */
+}
+
+.card-image-container { /* Estilos para o container da imagem */
+    overflow: hidden; /* Esconde conteúdo que ultrapassa as bordas */
+}
+
+.card-img-top { /* Estilos para a imagem do produto */
+    transition: transform 0.3s; /* Adiciona transição para a imagem */
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.1); /* Exemplo: zoom na imagem ao passar o mouse no card */
+}
+
+.user-info { /* Estilos para as informações do usuário */
+    display: flex; /* Alinha os elementos horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.user-info img { /* Estilos para a foto do usuário */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Deixa a foto redonda */
+    object-fit: cover; /* Preenche o espaço com a imagem, cortando se necessário */
+    margin-right: 10px; /* Espaço entre a foto e o nome */
+}
+
+.user-name { /* Estilos para o nome do usuário */
+    font-weight: bold;
+}

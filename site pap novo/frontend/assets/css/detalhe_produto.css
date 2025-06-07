@@ -1,0 +1,276 @@
+.produto-detail { 
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+}
+.favorite-button-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+}
+
+.produto-info {
+    position: relative;
+}
+
+.favorite-container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #f8f9fa; /* Cor de fundo do botão */
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.favorite-container:hover {
+    background-color: #e2e6ea;
+}
+
+.favorite-container svg {
+    width: 20px;
+    height: 20px;
+}
+
+.slideshow-container {
+    flex: 2;
+    position: relative;
+    max-width: 600px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.slideshow-container {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto; /* Centraliza o slideshow */
+}
+
+.thumbnail-container {
+    display: flex;
+    justify-content: center; /* Centraliza as miniaturas horizontalmente */
+    gap: 10px; /* Espaçamento entre miniaturas */
+    margin-top: 15px; /* Espaço entre o slideshow e as miniaturas */
+    padding: 10px;
+    flex-wrap: wrap; /* Permite quebrar para uma nova linha em telas menores */
+}
+
+.thumbnail {
+    width: 80px;
+    height: 60px;
+    cursor: pointer;
+    border: 2px solid transparent; /* Para bordas ativas */
+    transition: transform 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha a miniatura */
+    border-radius: 5px;
+}
+
+.thumbnail.active {
+    border-color: #524ae3; /* Cor da borda da miniatura ativa */
+}
+
+.thumbnail:hover {
+    transform: scale(1.1); /* Zoom ao passar o mouse */
+}
+
+.slide {
+    display: none;
+    text-align: center;
+}
+
+.slide img {
+	height:70vh;
+    width: 100%;
+	transition: opacity 0.4s ease-in-out;
+    border-radius: 10px;
+	object-fit: cover;
+}
+
+.slide.active {
+    display: block;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 18px;
+    user-select: none;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 45%; /* Mantém no centro vertical */
+    transform: translateY(-50%); /* Mantém no centro vertical */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 18px;
+    user-select: none;
+    z-index: 10; /* Garante que as setas estejam acima da imagem */
+}
+
+
+
+.prev {
+    transform: translateY(-50%) rotate(180deg); /* Mantém no centro vertical e rotaciona */
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.thumbnail-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 5px;
+}
+
+.thumbnail {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.thumbnail img {
+    width: 60px;
+    border-radius: 5px;
+    border: 2px solid transparent;
+}
+
+.thumbnail.active img {
+    border-color: #524ae3; /* Cor de destaque */
+}
+
+.produto-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.produto-info h1 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.produto-info p {
+    margin: 5px 0;
+}
+
+.produto-info .btn-comprar {
+    padding: 10px 20px;
+    background-color: #524ae3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.produto-info .btn-comprar:hover {
+    background-color: #3b3b9e;
+}
+
+.seller-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 5px;
+    vertical-align: middle;
+	object-fit: cover;
+}
+
+.thumbnail-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+    padding: 10px;
+    flex-wrap: wrap; /* Para miniaturas se ajustarem na linha, se necessário */
+}
+
+.thumbnail {
+    width: 90px;
+    height: 70px;
+    border-radius: 8px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    object-fit: cover;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.thumbnail:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.thumbnail.active {
+    border: 2px solid var(--portage); /* Destacar a miniatura ativa */
+    opacity: 1;
+}
+
+
+/* Ajuste na informação do produto */
+.produto-info {
+    flex: 1;
+    max-width: 45%;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .produto-detail {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .produto-slideshow, .produto-info {
+        max-width: 100%;
+    }
+
+    .thumbnail-container {
+        flex-wrap: wrap;
+    }
+
+    .thumbnail {
+        width: 70px;
+        height: 50px;
+    }
+}

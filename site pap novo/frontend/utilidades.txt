@@ -1,0 +1,86 @@
+footer para baixo:
+
+<style>
+    body {
+    display: flex; /* Ativa Flexbox no body */
+    flex-direction: column; /* Define a direção do Flexbox para coluna (vertical) */
+    min-height: 100vh; /* Garante que o body ocupa pelo menos 100% da altura do viewport */
+}
+
+.container.mt-5 { /* Se o seu conteúdo principal está dentro de um container com a classe 'container mt-5' */
+    flex: 1; /* Faz com que o container de conteúdo principal cresça e ocupe o espaço vertical disponível */
+}
+
+footer { /* Se o seu rodapé estiver dentro de uma tag <footer>, ajuste conforme necessário */
+    margin-top: auto; /* Empurra o rodapé para a parte inferior, utilizando o espaço 'auto' de margem superior */
+}
+
+</style> 
+
+
+
+CREATE TABLE TipoUtilizador (
+    CodTipoUt INT PRIMARY KEY AUTO_INCREMENT,
+    Designacao VARCHAR(50) UNIQUE NOT NULL
+);
+
+
+<div class="d-flex flex-column justify-content-center align-items-center h-100">
+
+-- Inserir os tipos de utilizador (Administrador, Gestor, Utilizador)
+INSERT INTO TipoUtilizador (Designacao) VALUES ('Administrador');
+INSERT INTO TipoUtilizador (Designacao) VALUES ('Gestor');
+INSERT INTO TipoUtilizador (Designacao) VALUES ('Utilizador');
+
+:root {
+    --portage: #9572f1;
+    --hawkes-blue: #d3d3fb;
+    --perfume: #b690f7;
+    --royal-blue: #524ae3;
+    --portage-light: #938bf0;
+    --perfume-light: #c1b0fb;
+    --link-water: #f1f1fc;
+    --perano: #b0aff5;
+    --selago: #ece4fc;
+    --spindle: #bcbcec;
+}
+
+<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+?>
+
+
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+
+
+<div class="container-fluid mt-3">
+  <h1>Three equal width columns</h1>
+  <p>Note: Try to add a new div with class="col" inside the row class - this will create four equal-width columns.</p>
+  <div class="row">
+    <div class="col-3 p-4 bg-primary text-white">.col</div>
+    <div class="col-3 p-4 bg-dark text-white">.col</div>
+    <div class="col-3 p-4 bg-primary text-white">.col</div>
+  <div class="col-3 p-4 bg-primary text-white">.col</div>
+  <div class="col-3 p-4 bg-primary text-white">.col</div>
+</div>
+</div>
+
+
+navbar
+<?php
+	if(isset($_SESSION['email']))
+		require("./assets/html/menulogado.php");
+	else
+		require("./assets/html/menusemlogin.php");
+?>
+
+
+delete de categorias pode requerir apagar produtos relacionados
+
+
+EM BAIXO MOSTRAR OUTROS PRODUTOS QUE O MESMO SELLER TENHA A VENDA

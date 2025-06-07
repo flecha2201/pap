@@ -1,0 +1,287 @@
+-- Inserir a categoria principal "Mulher"
+INSERT INTO categorias (cod_categoria, nome_categoria, pai) VALUES
+(1, 'Mulher', NULL);
+
+-- Inserir subcategorias de "Roupa"
+INSERT INTO categorias (cod_categoria, nome_categoria, pai) VALUES
+(101, 'Roupa', 1),
+(102, 'Camisolas e sweaters', 101),
+(103, 'Vestidos', 101),
+(104, 'Tops e t-shirts', 101),
+(105, 'Calças e leggings', 101),
+(106, 'Macacões', 101),
+(107, 'Lingerie e vestuário de noite', 101),
+(108, 'Vestuário de exterior', 101),
+(109, 'Fatos e blazers', 101),
+(110, 'Saias', 101),
+(111, 'Calças de ganga', 101),
+(112, 'Calções e calças curtas', 101),
+(113, 'Vestuário de banho', 101),
+(114, 'Vestuário de maternidade', 101),
+(115, 'Trajes e roupas especiais', 101),
+(116, 'Activewear', 101),
+(117, 'Outro vestuário', 101);
+
+-- Inserir subcategorias de "Calçado"
+INSERT INTO categorias (cod_categoria, nome_categoria, pai) VALUES
+(201, 'Calçado', 1),
+(202, 'Sabrinas', 201),
+(203, 'Botas', 201),
+(204, 'Alpercatas', 201),
+(205, 'Socas e Mules', 201),
+(206, 'Chinelos de dedo e slide', 201),
+(207, 'Sapatos com atacador', 201),
+(208, 'Sapatos tipo Mary Jane e congéneres', 201),
+(209, 'Sapatos de salto', 201),
+(210, 'Sandálias', 201),
+(211, 'Pantufas', 201),
+(212, 'Sapatilhas', 201),
+(213, 'Calçado desportivo', 201);
+
+-- Inserir subcategorias de "Malas"
+INSERT INTO categorias (cod_categoria, nome_categoria, pai) VALUES
+(301, 'Malas', 1),
+(302, 'Mochilas', 301),
+(303, 'Sacos de praia', 301),
+(304, 'Mala bucket', 301),
+(305, 'Carteiras clutch', 301),
+(306, 'Malas e sacos desportivos', 301),
+(307, 'Malas tipo hobo', 301),
+(308, 'Malas de viagem', 301),
+(309, 'Malas satchel e mensageiro', 301),
+(310, 'Sacos tote', 301),
+(311, 'Malas com manipulo de mão', 301),
+(312, 'Malas briefcase', 301),
+(313, 'Bolsas de cintura', 301),
+(314, 'Sacos protetores para roupa', 301),
+(315, 'Malas e mochilas de aventura', 301),
+(316, 'Malas de maquilhagem', 301),
+(317, 'Malas a tiracolo', 301),
+(318, 'Bolsas e carteiras', 301);
+
+-- Inserir subcategorias de "Acessórios"
+INSERT INTO categorias (cod_categoria, nome_categoria, pai) VALUES
+(401, 'Acessórios', 1),
+(402, 'Cintos', 401),
+(403, 'Bandanas e lenços de cabeça', 401),
+(404, 'Luvas', 401),
+(405, 'Lenço de pescoço', 401),
+(406, 'Chapéus e bonés', 401),
+(407, 'Porta-chaves', 401),
+(408, 'Óculos de sol', 401),
+(409, 'Relógios', 401),
+(410, 'Jóias', 401),
+(411, 'Cachecóis e lenços', 401),
+(412, 'Guarda-chuva', 401),
+(413, 'Outros acessórios', 401);
+
+-- Inserir subcategorias de "Beleza"
+INSERT INTO categorias (cod_categoria, nome_categoria, pai) VALUES
+(501, 'Beleza', 1),
+(502, 'Maquilhagem', 501),
+(503, 'Perfume', 501),
+(504, 'Acessórios de beleza', 501),
+(505, 'Cuidados faciais', 501),
+(506, 'Cuidados corporais', 501),
+(507, 'Cuidados com as mãos', 501),
+(508, 'Cuidados com as unhas', 501),
+(509, 'Cuidados com o cabelo', 501),
+(510, 'Outros artigos de beleza', 501);
+
+
+-- Inserir a categoria principal "Homem"
+INSERT INTO categorias (cod_categoria, nome_categoria, pai) VALUES
+(2, 'Homem', NULL);
+
+-- Inserir subcategorias de "Roupa"
+INSERT INTO categorias (cod_categoria, nome_categoria, pai) VALUES
+(201, 'Roupa', 2),
+(202, 'Vestuário de exterior', 201),
+(203, 'Fatos e blazers', 201),
+(204, 'Calças', 201),
+(205, 'Meias e roupa interior', 201),
+(206, 'Vestuário de banho', 201),
+(207, 'Trajes e roupas especiais', 201),
+(208, 'Calças de ganga', 201),
+(209, 'Tops e t-shirts', 201),
+(210, 'Camisolas e sweaters', 201),
+(211, 'Calções', 201),
+(212, 'Pijamas', 201),
+(213, 'Activewear', 201),
+(214, 'Outro vestuário para homem', 201);
+
+-- Inserir subcategorias de "Sapatos"
+INSERT INTO categorias (cod_categoria, nome_categoria, pai) VALUES
+(301, 'Sapatos', 2),
+(302, 'Botas', 301),
+(303, 'Alpercatas', 301),
+(304, 'Sapatos Formais', 301),
+(305, 'Pantufas', 301),
+(306, 'Sapatilhas', 301),
+(307, 'Sapatos de Vela, Loafers e Mocassins', 301),
+(308, 'Socas e Mules', 301),
+(309, 'Chinelos de dedo e slide', 301),
+(310, 'Sandálias', 301),
+(311, 'Calçado Desportivo', 301);
+
+-- Inserir subcategorias de "Acessórios"
+INSERT INTO categorias (cod_categoria, nome_categoria, pai) VALUES
+(401, 'Acessórios', 2),
+(402, 'Bandanas e lenços de cabeça', 401),
+(403, 'Suspensórios', 401),
+(404, 'Lenço de pescoço', 401),
+(405, 'Joias', 401),
+(406, 'Cachecóis e lenços', 401),
+(407, 'Gravatas e laços', 401),
+(408, 'Cintos', 401),
+(409, 'Luvas', 401),
+(410, 'Chapéus e bonés', 401),
+(411, 'Lenços de bolso', 401),
+(412, 'Óculos de sol', 401),
+(413, 'Relógios', 401),
+(414, 'Outro', 401);
+
+-- Inserir subcategorias de "Cuidados pessoais"
+INSERT INTO categorias (cod_categoria, nome_categoria, pai) VALUES
+(501, 'Cuidados pessoais', 2),
+(502, 'Ferramentas e acessórios', 501),
+(503, 'Cuidados corporais', 501),
+(504, 'Aftershave e colónia', 501),
+(505, 'Conjuntos de barbear e aparar', 501),
+(506, 'Cuidados faciais', 501),
+(507, 'Cuidados com o cabelo', 501),
+(508, 'Cuidado com as mãos e unhas', 501),
+(509, 'Maquilhagem', 501),
+(510, 'Outros artigos de cuidados pessoais', 501);
+
+
+
+-- Inserir a categoria principal de Eletrónica
+INSERT INTO categorias (cod_categoria, nome_categoria, pai) VALUES
+(1, 'Eletrónica', NULL);
+
+-- Inserir subcategorias de "Eletrónica"
+INSERT INTO categorias (cod_categoria, nome_categoria, pai) VALUES
+(101, 'Acessórios', 1),
+(102, 'Câmaras e acessórios', 1),
+(103, 'Acessórios para computador', 1),
+(104, 'e-Readers', 1),
+(105, 'Dispositivos de GPS e de navegação', 1),
+(106, 'Leitores de música portáteis', 1),
+(107, 'Auscultadores e auriculares', 1),
+(108, 'Telemóveis', 1),
+(109, 'Rádios portáteis e altifalantes', 1),
+(110, 'Dispositivos de casa inteligente', 1),
+(111, 'Dispositivos de streaming', 1),
+(112, 'Tablets', 1),
+(113, 'Videojogos e consolas', 1),
+(114, 'Realidade virtual', 1),
+(115, 'Tecnologia wearable', 1);
+
+-- Inserir subcategorias de "Câmaras e acessórios"
+INSERT INTO categorias (cod_categoria, nome_categoria, pai) VALUES
+(201, 'Lentes', 102),
+(202, 'Flashes', 102),
+(203, 'Estabilizadores e suportes', 102),
+(204, 'Outro equipamento fotográfico', 102);
+
+-- Inserir subcategorias de "Acessórios para computador"
+INSERT INTO categorias (cod_categoria, nome_categoria, pai) VALUES
+(301, 'Alfaiates de computador', 103),
+(302, 'Teclados', 103),
+(303, 'Ratos', 103),
+(304, 'Microfones', 103),
+(305, 'Dispositivos de rede', 103),
+(306, 'Pads táteis e canetas stylus', 103),
+(307, 'Webcams', 103);
+
+-- Inserir subcategorias de "Tecnologia wearable"
+INSERT INTO categorias (cod_categoria, nome_categoria, pai) VALUES
+(401, 'Pulseiras de fitness', 115),
+(402, 'Óculos inteligentes', 115),
+(403, 'Smartwatches', 115),
+(404, 'Anéis inteligentes', 115),
+(405, 'Braceletes de substituição', 115);
+
+
+-- Inserir categoria principal "Criança"
+INSERT INTO categorias (cod_categoria, nome_categoria, pai) VALUES
+(3, 'Criança', NULL);
+
+-- Inserir subcategorias de "Vestuário"
+INSERT INTO categorias (cod_categoria, nome_categoria, pai) VALUES
+(101, 'Vestuário', 3),
+(102, 'Roupa para menina', 101),
+(103, 'Roupa para menino', 101),
+(104, 'Vestuário de exterior', 101),
+(105, 'Conjuntos de roupa', 101),
+(106, 'Vestuário de noite', 101),
+(107, 'Vestuário de banho', 101),
+(108, 'Vestuário formal', 101),
+(109, 'Vestuário de desporto', 101),
+(110, 'Outro vestuário', 101);
+
+-- Inserir subcategorias de "Calçado"
+INSERT INTO categorias (cod_categoria, nome_categoria, pai) VALUES
+(201, 'Calçado', 3),
+(202, 'Botas', 201),
+(203, 'Sapatos desportivos', 201),
+(204, 'Sandálias', 201),
+(205, 'Sapatilhas', 201),
+(206, 'Pantufas', 201),
+(207, 'Calçado de banho', 201),
+(208, 'Outros tipos de calçado', 201);
+
+-- Inserir subcategorias de "Brinquedos"
+INSERT INTO categorias (cod_categoria, nome_categoria, pai) VALUES
+(301, 'Brinquedos', 3),
+(302, 'Bonecas e acessórios', 301),
+(303, 'Jogos de construção', 301),
+(304, 'Brinquedos de madeira', 301),
+(305, 'Brinquedos educativos', 301),
+(306, 'Peluches', 301),
+(307, 'Brinquedos musicais', 301),
+(308, 'Veículos de brincar', 301),
+(309, 'Brinquedos para exterior', 301),
+(310, 'Jogos eletrónicos', 301),
+(311, 'Outros brinquedos', 301);
+
+-- Inserir subcategorias de "Móveis e decoração"
+INSERT INTO categorias (cod_categoria, nome_categoria, pai) VALUES
+(401, 'Móveis e decoração', 3),
+(402, 'Berços e camas', 401),
+(403, 'Tapetes de brincar', 401),
+(404, 'Cadeiras para criança', 401),
+(405, 'Móveis de arrumação', 401),
+(406, 'Decoração infantil', 401),
+(407, 'Outros móveis e decoração', 401);
+
+-- Inserir subcategorias de "Cuidados e higiene"
+INSERT INTO categorias (cod_categoria, nome_categoria, pai) VALUES
+(501, 'Cuidados e higiene', 3),
+(502, 'Amamentação', 501),
+(503, 'Fraldas e trocadores', 501),
+(504, 'Segurança para bebê', 501),
+(505, 'Banho e acessórios', 501),
+(506, 'Acessórios para comer', 501),
+(507, 'Outros cuidados e higiene', 501);
+
+-- Inserir subcategorias de "Material escolar"
+INSERT INTO categorias (cod_categoria, nome_categoria, pai) VALUES
+(601, 'Material escolar', 3),
+(602, 'Mochilas', 601),
+(603, 'Lancheiras', 601),
+(604, 'Cadernos e agendas', 601),
+(605, 'Estojos', 601),
+(606, 'Outros materiais escolares', 601);
+
+-- Inserir subcategorias de "Veículos para crianças"
+INSERT INTO categorias (cod_categoria, nome_categoria, pai) VALUES
+(701, 'Veículos para crianças', 3),
+(702, 'Carrinhos de bebê', 701),
+(703, 'Triciclos', 701),
+(704, 'Andadores', 701),
+(705, 'Bicicletas', 701),
+(706, 'Patinetes', 701),
+(707, 'Outros veículos para crianças', 701);
+

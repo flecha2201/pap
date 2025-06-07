@@ -1,0 +1,44 @@
+
+quando o botao de apagar da opção invalida geralmente é porque falta o ficheiro no index
+
+mudancas no index form os menus para cada mf e usar a tabela de tipout
+
+
+CREATE TABLE TipoUtilizador (
+    CodTipoUt INT PRIMARY KEY AUTO_INCREMENT,
+    Designacao VARCHAR(50) UNIQUE NOT NULL
+);
+
+
+<div class="d-flex flex-column justify-content-center align-items-center h-100">
+
+-- Inserir os tipos de utilizador (Administrador, Gestor, Utilizador)
+INSERT INTO TipoUtilizador (Designacao) VALUES ('Administrador');
+INSERT INTO TipoUtilizador (Designacao) VALUES ('Gestor');
+INSERT INTO TipoUtilizador (Designacao) VALUES ('Utilizador');
+
+dropbox de favorito identifcar utilizador adicionar produto tambem faz o mesmo no eamil
+
+aviso de pass errada
+utilizador nao tem botao de apagar gestor e alterar o mesmo em fatura e categorias e categoria produtos e itens fatura
+
+<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+?>
+
+
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+
+
+
+
+menu fixo ao dar scroll
+arranjar o redirect do fav
+ajax 
+modal dos produtos no ver_mais
+fazer um where para mostrar so os favoritos de quem está logado

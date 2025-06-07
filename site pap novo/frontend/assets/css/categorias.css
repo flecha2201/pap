@@ -1,0 +1,129 @@
+<style>
+/* favnavbar.css */
+
+/* Configurações básicas do menu dropdown */
+.dropdown-menu {
+  display: none; /* Ocultar por padrão */
+  list-style: none;
+  padding: 15px; /* Espaçamento interno */
+  margin: 0;
+  background-color: var(--selago); /* Usar a cor de fundo do logo */
+  border: 1px solid var(--spindle);
+  border-radius: 5px;
+  position: absolute;
+  z-index: 1000;
+  width: auto;
+  max-width: 1000px; 
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease; /* Transição suave */
+}
+
+/* Estilo para item do menu */
+.dropdown-item {
+  padding: 10px 15px;
+  color: var(--royal-blue);
+  text-decoration: none;
+  display: block;
+  text-align: left; /* Alinhar o texto à esquerda */
+  border-radius: 3px;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Animações suaves */
+}
+
+.dropdown-item:hover {
+  background: linear-gradient(45deg, var(--portage-light), var(--perano));
+  color: var(--royal-blue);
+}
+
+/* Exibir dropdown no hover */
+.navbar-nav .nav-item {
+  position: relative;
+  padding: 5px 5px; /* Aumentar hitbox */
+}
+
+.nav-item:hover > .dropdown-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  animation: fadeIn 0.2s ease-in-out; /* Animação suave */
+}
+
+/* Submenu: ajustar layout */
+.dropdown-menu ul {
+  display: grid; /* Define grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(calc(100% / 6), 1fr)); /* Gerar colunas automaticamente */
+  gap: 10px; /* Espaçamento entre itens */
+  padding: 10px; /* Espaçamento interno */
+  background-color: var(--link-water);
+  border-radius: 5px;
+}
+
+/* Garantir que os itens tenham altura ajustável */
+.dropdown-menu ul li {
+  list-style: none;
+  overflow: hidden; /* Evitar que o conteúdo ultrapasse o contêiner */
+}
+
+.dropdown-menu ul li a {
+  text-decoration: none;
+  padding: 10px 15px; /* Aumentar área clicável */
+  display: block;
+  color: var(--royal-blue);
+  border-radius: 3px; /* Pequeno arredondamento nos links */
+  word-wrap: break-word;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Suavizar hover */
+}
+
+.dropdown-menu ul li a:hover {
+  background-color: var(--hawkes-blue);
+  color: white;
+}
+
+/* Animação de slide para a direita com fade */
+@keyframes slideFadeHorizontal {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px); /* Começa deslocado à esquerda */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* Finaliza na posição normal */
+  }
+}
+
+/* Aplicar a animação no hover */
+.nav-item:hover > .dropdown-menu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  animation: slideFadeHorizontal 0.25s ease-out; /* Transição suave */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .dropdown-menu ul {
+    grid-template-columns: 1fr; /* Uma única coluna em telas pequenas */
+  }
+}
+
+/* Submenu posicionado à direita do menu pai */
+.navbar-nav .dropdown-menu ul {
+  top: 0;
+  left: 100%; /* Exibir ao lado do menu pai */
+  position: absolute;
+  display: none;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Exibir submenu ao passar o rato */
+.dropdown-menu li:hover > ul {
+  display: block;
+}
+
+/* Ajustes de margem para submenus */
+.nav-item > .dropdown-menu {
+  margin-top: 5px;
+}
+</style>

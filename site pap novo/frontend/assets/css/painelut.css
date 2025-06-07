@@ -1,0 +1,227 @@
+<style>
+        body {
+            background-color: #f5f5f5;
+
+        }
+        .container {
+            margin-top: 30px;
+        }
+        .sidebar {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            color: #333;
+            text-decoration: none;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .sidebar a:hover {
+            background-color: #ddd;
+        }
+        .settings-panel {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .settings-group {
+            background-color: #fafafa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #e0e0e0;
+        }
+        .settings-group label {
+            font-weight: bold;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        .settings-group input[type="text"],
+        .settings-group textarea,
+        .settings-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        .btn-update {
+            background-color: #00796b;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .btn-update:hover {
+            background-color: #004d40;
+        }
+        .profile-photo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .profile-photo img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .sidebar {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 10px;
+            height: 100%;
+        }
+
+        .sidebar h4 {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .sidebar a {
+            display: block;
+            margin: 10px 0;
+            color: #524ae3;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
+
+        .settings-panel {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .settings-group h5 {
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        .settings-group p {
+            margin-bottom: 10px;
+        }
+
+        .profile-photo img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .btn-update {
+            background-color: #524ae3;
+            color: white;
+        }
+
+        .btn-update:hover {
+            background-color: #3f3ac1;
+        }
+    
+:root {
+    --portage: #9572f1;
+    --hawkes-blue: #d3d3fb;
+    --perfume: #b690f7;
+    --royal-blue: #524ae3;
+    --link-water: #f1f1fc;
+    --perano: #b0aff5;
+    --selago: #ece4fc;
+}
+
+.btn-gradient {
+    background: linear-gradient(45deg, var(--hawkes-blue), var(--royal-blue));
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    cursor: not-allowed; /* Padrão: botão desativado */
+}
+
+.btn-gradient:enabled {
+    cursor: pointer; /* Ativado quando os campos estão preenchidos */
+    background: linear-gradient(45deg, var(--perfume), var(--portage));
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-gradient:hover:enabled {
+    background: linear-gradient(45deg, var(--selago), var(--perano));
+    transform: scale(1.05);
+}
+
+/* Campo de Senha com ícone */
+.password-field {
+    position: relative;
+    width: 100%;
+}
+
+.password-field input {
+    width: 100%;
+    padding-right: 40px; /* Espaço para o ícone */
+    height: 48px; /* Mantém o tamanho padrão do campo */
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 12px;
+    box-sizing: border-box;
+}
+
+.password-field .toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 12px; /* Alinhado à borda direita */
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: var(--royal-blue);
+    transition: color 0.3s;
+}
+
+.password-field .toggle-password:hover {
+    color: var(--perfume);
+}
+
+
+/* Botão de Alterar Password */
+.btn-primary {
+    background: var(--royal-blue); /* Cor principal */
+    color: #fff; /* Texto em branco */
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    text-align: center;
+    width: 100%; /* Preenche a largura do container */
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: var(--perfume); /* Cor mais clara no hover */
+    transform: translateY(-2px); /* Elevação no hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.btn-primary:active {
+    transform: translateY(0); /* Remove elevação ao clicar */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+    </style>
+	

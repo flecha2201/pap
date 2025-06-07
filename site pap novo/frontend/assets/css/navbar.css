@@ -1,0 +1,49 @@
+/* favnavbar.css */
+
+/* Ocultar menus por padrão */
+.dropdown-menu {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  position: absolute;
+  z-index: 1000;
+}
+
+/* Estilo dos itens */
+.dropdown-item {
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+  color: #000;
+}
+
+/* Menu principal */
+.navbar-nav .nav-item {
+  position: relative;
+}
+
+/* Submenu posicionado à direita do menu pai */
+.dropdown-menu ul {
+  top: 0;
+  left: 100%; /* Exibe ao lado do menu pai */
+  position: absolute;
+  display: none;
+}
+
+.dropdown-menu ul li {
+  position: relative;
+}
+
+.dropdown-menu ul li .dropdown-menu {
+  left: 100%; /* Sub-submenu alinhado à direita */
+  top: 0;
+}

@@ -1,0 +1,252 @@
+       :root {
+            --portage-dark: #6a49c2;
+            --royal-blue-dark: #3a32a8;
+            --perfume-dark: #8b69c7;
+            --spindle-dark: #8a89a2;
+            --portage: #9572f1;
+            --hawkes-blue: #d3d3fb;
+            --perfume: #b690f7;
+            --royal-blue: #524ae3;
+            --portage-light: #938bf0;
+            --perfume-light: #c1b0fb;
+            --link-water: #f1f1fc;
+            --perano: #b0aff5;
+            --selago: #ece4fc;
+            --spindle: #bcbcec;
+
+            --primary: var(--royal-blue);
+            --secondary: var(--perfume);
+            --background: var(--link-water);
+            --border: var(--spindle);
+            --text: #333;
+            --highlight: var(--portage);
+        }
+
+       
+
+
+.button {
+    background-color: var(--royal-blue);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+	margin-top :10px;
+    transition: background 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: var(--royal-blue-dark);
+}
+
+.button:disabled {
+    background-color: var(--spindle);
+    cursor: not-allowed;
+}
+
+#botao-comprar {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+        .checkout-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+margin-top: 20px;
+    padding: 20px;
+    gap: 20px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+        .checkout-section {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .checkout-header {
+            font-size: 1.8em;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .input1, select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            font-size: 1em;
+        }
+
+        .input1:focus, select:focus {
+            border-color: var(--highlight);
+            outline: none;
+            box-shadow: 0 0 5px var(--highlight);
+        }
+
+        .shipping-options {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .shipping-option {
+            flex: 1;
+            padding: 10px;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .shipping-option:hover, .shipping-option.active {
+            border-color: var(--highlight);
+            background-color: var(--highlight);
+            color: white;
+        }
+
+   
+
+        .review-section {
+            background: var(--background);
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .review-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-bottom: 1px dashed var(--border);
+            padding: 10px 0;
+        }
+
+        .review-item:last-child {
+            border-bottom: none;
+        }
+
+        .review-item img {
+            width: 70px;
+            height: 70px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .item-name {
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .item-price {
+            color: var(--secondary);
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .checkout-container {
+                flex-direction: column;
+            }
+        }
+		
+		.login-required-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+            text-align: center;
+            background-color: var(--background);
+            color: var(--text);
+        }
+
+        .login-required-message {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .login-required-link {
+            padding: 10px 20px;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+        .login-required-link:hover {
+            padding: 10px 20px;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        
+        .tooltip-portes {
+            position: relative;
+            display: inline-block;
+        }
+
+         .tooltip-portes .tooltiptext {
+            visibility: hidden;
+            width: 220px;
+            background-color: #333; /* Darker background for better contrast */
+            color: #fff;
+            text-align: left; /* Align text to the left for better readability */
+            border-radius: 8px; /* More rounded corners */
+            padding: 10px; /* Increased padding */
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -110px; /* Adjusted margin to center wider tooltip */
+            opacity: 0;
+            transition: opacity 0.3s, visibility 0s linear 0.3s; /* Added visibility transition delay for smoother effect */
+            font-size: 0.9em; /* Slightly smaller font size for tooltip text */
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3); /* Added shadow for depth */
+        }
+
+        .tooltip-portes:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+            transition-delay: 0s; /* Remove delay on hover */
+        }
+
+
+        .tooltip-portes .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -8px; /* Adjusted margin for pointer centering */
+            border-width: 8px; /* Slightly larger pointer */
+            border-style: solid;
+            border-color: #333 transparent transparent transparent; /* Pointer color matches tooltip background */
+        }
+
+        .is-invalid {
+            border-color: red !important;
+        }

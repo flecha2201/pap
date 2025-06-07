@@ -1,0 +1,216 @@
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+body {
+    font-family: 'Poppins', sans-serif;
+	font-weight: 300;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Impede o scroll horizontal */
+	max-width: 100%;
+	
+}
+
+.product-container {
+    overflow: hidden;
+}
+
+i.fa {
+    font-size: 20px;
+    color: #9300ff; /* Exemplo da tua paleta de cores */
+    margin-right: 10px;
+}
+
+ 
+/* Navbar personalizada com altura reduzida e cor de fundo */
+    .custom-navbar {
+        background-color: #d3d2ff;
+        padding: 10px 15px; /* Reduz a altura */
+
+    }
+
+
+
+    
+
+    /* Botão de login com gradiente */
+    .gradient-button {
+        background: linear-gradient(45deg, #524ae3, #9572f1);
+        color: white;
+        padding: 8px 15px;
+        border-radius: 25px;
+        border: none;
+        text-decoration: none; /* Remove sublinhado */
+    }
+
+    /* Desativa hover no botão de login */
+    .gradient-button:hover {
+        background: linear-gradient(45deg, #524ae3, #9572f1); /* Mesma cor no hover */
+        color: white; /* Mesma cor do texto */
+        transform: none; /* Sem efeitos de transformação */
+        transition: none; /* Sem animações */
+        text-decoration: none; /* Remove o sublinhado */
+    }
+
+    /* Estilo para a hero section */
+.hero-content {
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.9), rgba(245, 245, 245, 0.9)); /* Gradiente claro */
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+    backdrop-filter: blur(10px); /* Efeito de desfoque para fundo */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Borda suave */
+    color: #333; /* Cor do texto mais elegante */
+	background-color: rgba(255, 255, 255, 1);
+    padding: 15px;
+    max-width: 310px;
+    text-align: left;
+    margin-top: 10%;
+}
+
+
+
+    
+	<style
+        .custom-navbar {
+            background: #d3d2ff;
+            padding: 10px 15px;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        /* Estilo para a secção de Novidades */
+        .product-grid {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            width: 220px;
+            overflow: hidden;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-user {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            gap: 10px;
+        }
+
+        .user-photo {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .username {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 10px;
+			text-align: left;
+        }
+
+        .product-title {
+            font-size: 14px;
+            margin: 5px 0;
+            color: #333;
+        }
+
+        .product-price {
+            font-size: 16px;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .modal.fade .modal-dialog {
+            transform: translateY(-100px);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .modal.show .modal-dialog {
+            transform: translateY(0);
+        }
+    </style>
+.user-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0; /* Remove margem inferior extra */
+    padding: 5px 0; /* Mantém algum espaçamento interno */
+    gap: 5px; /* Reduz o espaçamento entre a imagem e o nome */
+}
+
+.user-info img {
+    width: 35px; /* Ajusta o tamanho do avatar */
+    height: 35px;
+    border-radius: 50%; /* Mantém a imagem circular */
+    object-fit: cover;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adiciona sombra para destaque */
+}
+
+.user-info .user-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    white-space: nowrap; /* Evita quebra de texto */
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 8px; /* Reduz o espaçamento interno */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    margin-top: 2%; /* Reduz ainda mais o espaço entre a imagem e user-info */
+    height: 180px; /* Ajuste opcional para reduzir altura */
+    object-fit: cover;
+}
+
+
+
+/* Animação do modal */
+.custom-modal .modal-dialog {
+  animation: scaleIn 0.4s ease-out forwards;
+  transform: scale(0.9);
+  opacity: 0;
+}
+
+@keyframes scaleIn {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

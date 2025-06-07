@@ -1,0 +1,235 @@
+/* Paleta de cores */
+:root {
+    --portage: #9572f1;
+    --hawkes-blue: #d3d3fb;
+    --perfume: #b690f7;
+    --royal-blue: #524ae3;
+    --portage-light: #938bf0;
+    --perfume-light: #c1b0fb;
+    --link-water: #f1f1fc;
+    --perano: #b0aff5;
+    --selago: #ece4fc;
+    --spindle: #bcbcec;
+}
+
+/* Estilizações gerais */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--link-water);
+    color: var(--royal-blue);
+    line-height: 1.6;
+}
+
+.header {
+    background-color: var(--portage);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.header-content h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.header-content p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0 0;
+}
+
+.main-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    color: black; /* Alteração da cor do texto principal */
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-text h2 {
+    color: var(--portage);
+    margin-bottom: 1rem;
+}
+
+.about-text h3 {
+    color: var(--royal-blue);
+    margin: 1rem 0 0.5rem;
+}
+
+.about-text ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+}
+
+.about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.features {
+    margin-top: 3rem;
+}
+
+.features h2 {
+    text-align: center;
+    color: var(--portage);
+    margin-bottom: 2rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.feature-item {
+    background-color: var(--selago);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+}
+
+.feature-item::before {
+    content: '\f00c'; /* Exemplo de ícone de checkmark */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: var(--portage);
+    font-size: 2rem;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--link-water);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feature-item h3 {
+    color: var(--royal-blue);
+    margin-bottom: 0.5rem;
+}
+
+
+.fav-button {
+  background-color: #d3d2ff;
+  position: relative;
+  list-style: none;
+  width: 50px; /* Reduzido de 60px para 50px */
+  height: 50px; /* Reduzido de 60px para 50px */
+  border-radius: 50px; /* Ajustado para refletir o novo tamanho */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  border: none;
+}
+
+.fav-button:active {
+  scale: 1.2;
+}
+
+.fav-button:hover {
+  width: 150px; /* Reduzido de 180px para 150px */
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0);
+}
+
+.fav-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50px;
+  background: linear-gradient(to top right, #b690f7, #9572f1, #524ae3);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.fav-button:hover::before {
+  opacity: 1;
+}
+
+.fav-button::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  background: linear-gradient(45deg, var(--i), var(--j));
+  filter: blur(15px);
+  transition: 0.5s;
+  z-index: -1;
+  opacity: 0;
+}
+
+.fav-button:hover::after {
+  opacity: 0.5;
+}
+
+.fav-button svg {
+  color: #777;
+  width: auto;
+  height: 25px; /* Reduzido de 30px para 25px */
+  transition: 0.5s;
+  transition-delay: 0.25s;
+}
+
+.fav-button:hover svg {
+  transform: scale(0);
+  color: #fff;
+  transition-delay: 0s;
+}
+
+.fav-button span {
+  position: absolute;
+}
+
+.fav-button .title {
+  color: #fff;
+  font-size: 1em; /* Reduzido de 1.3em para 1em */
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transform: scale(0);
+  transition: 0.5s;
+  transition-delay: 0s;
+  font-weight: 600;
+}
+
+.fav-button:hover .title {
+  transform: scale(1);
+  transition-delay: 0.25s;
+}
+
+/* Ajustes adicionais para navbar */
+.navbar-item {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-item .fav-button {
+  margin: 0;
+}
